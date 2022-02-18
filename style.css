@@ -145,7 +145,7 @@ header a {
 #second-menu{
   display: flex;
   justify-content: center;
-  /*padding: 8px;*/
+  padding: 0 10px;
   box-shadow:  0 1px 3px 0 rgb(0 0 0 / 8%);
 }
 
@@ -160,9 +160,10 @@ header a {
 
 #second-menu a:hover{
   color:#0064f9;
+
 }
 #second-menu a:focus{
-  border-bottom: 1px solid #0064f9;
+  border-bottom: 2px solid #0064f9;
 }
 .line-after-menu{
   color: rgb(161, 156, 156);
