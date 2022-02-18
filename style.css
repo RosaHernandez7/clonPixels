@@ -203,10 +203,44 @@ header a {
   flex:25%; /*un espacio por columna*/
   padding: 5px;
 }
+
+#toggle, #close,.open,.close {
+  display: none;
+}
+
+
 /*TABLET*/
 @media screen and (max-width:900px){
   .column{
       flex:33%
+  }
+  .menu-desplegar{
+    display: flex;
+    flex-direction: column;
+  }
+  .open,.close {
+    display: block;
+    cursor: pointer;
+    font-size: xx-large;
+    color: white;
+    background-color: #25233d;
+    text-align: center;
+  }
+  #nav-title {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    /*display: none;segunda opición*/
+  }
+  #toggle:checked ~ #nav-title  {
+     display: flex;  
+           flex-direction: column;
+   /* display: none;*/
+  }
+  #toggle:checked ~ .close{
+    display: flex;
+    flex-direction: column;
   }
 }
 
