@@ -13,6 +13,12 @@ header {
   width: 100%;
   height: 75vh;
 }
+
+.menu-desplegar{
+  display: flex;
+
+}
+
 header a {
   color: white;
   text-decoration: none;
@@ -21,6 +27,7 @@ header a {
 #nav-title {
   display: flex;
   align-items: center;
+  justify-content: right;
   font-size: 13px;
   width: 100%;
   /*background-color: rgb(46, 46, 87);*/
@@ -62,12 +69,25 @@ header a {
   display: flex;
   padding: 10px;
   width: 70%;
+  /* flex-wrap: nowrap ; */
   justify-content: right;
   margin: 0 20px 0 60px;
 }
+
 .menu-nav-elem:hover {
   color: rgb(216, 210, 210);
 }
+/*Transition*/
+/* #menu-nav .boton-nava a{
+  transition: all 300ms ease;
+
+}
+#menu-nav .boton-nav a:hover{
+ transform: scale(1.1);
+
+} */
+/*termina transision*/
+
 .boton-nav a {
   background-color: rgba(5, 160, 129, 0.932);
   padding: 8px 22px;
@@ -79,6 +99,7 @@ header a {
   /*es mejopr darle hover al contenedor*/
   /* background-color: blueviolet;
   color: red;*/
+  /* box-shadow: 0 0 10px 0px rgba(5, 160, 129, 0.5); */
   background-color: rgba(5, 160, 129, 0.5);
 }
 .header-main-text {
@@ -211,6 +232,7 @@ header a {
   color: rgb(216, 210, 210);
 }
 
+
 #menu-nav li ul{
   display: none;
   background-color: rgb(255, 255, 255);
@@ -218,13 +240,30 @@ header a {
   color: rgb(48, 46, 46);
   font-size:18px;
   position:absolute; /*evita que se deforme el menu principal*/
-  max-width: 150px;
+  min-width: 200px;
   padding: 6px 0;
   /* float: right; */
-  
-  /* z-index: 1; */
-
+  z-index: 1; /*orden de las capas*/
 }
+
+#menu-nav li ul li{
+  position:relative;/*para agregar submenus*/
+}
+
+
+/* #menu-nav li ul:hover{
+float: left;
+} */
+
+/* .pop-menu{
+  background-color: rgb(255, 255, 255);
+  font-weight:500;
+  color: rgb(48, 46, 46);
+  font-size:18px;
+  position:absolute; 
+  max-width: 150px;
+  padding: 6px 0;
+ } */
 #menu-nav li ul li{
   padding: 10px 20px 10px 15px;
 }
@@ -232,10 +271,39 @@ header a {
 #menu-nav li:hover > ul{
   display: block;
 }
+/* #menu-nav li ul:before{
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 12 solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12pc solid transparent;
+  position: absolute;
+  top: -12px;
+  left: 20px;
 
+} */
 #menu-nav li:hover > ul li:hover{
   background-color: rgb(221, 218, 218);
 }
+
+/*Social Media Icons*/
+.social-media{
+  display: flex;
+  /* padding: 2px;
+  margin: 10px; */
+}
+
+.social-media i{
+  padding: 12px 20px;
+  /* margin: 10px; */
+  color: #232a34;
+}
+.social-media i:hover{
+  color: white;
+  background-color: #232a34;
+}
+
 
 
 /*TABLET*/
@@ -245,7 +313,13 @@ header a {
   }
   .menu-desplegar {
     display: flex;
+    justify-content: space-between;
+     flex-wrap: wrap; /*Hara que el menu se pase a la siguente linea */
+    /* flex-direction: column; */
+  }
+  #menu-nav{
     flex-direction: column;
+    /* width: 50%; */
   }
   .open,
   .close {

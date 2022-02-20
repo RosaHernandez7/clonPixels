@@ -14,10 +14,7 @@
   <body>
     <header>
       <div class="menu-desplegar">
-        <input type="checkbox" id="toggle">
-        <label class="open"  for="toggle"><i class="fa-solid fa-bars"></i></label>
-
-        <nav id="nav-title">
+         
           <div class="main-nav-logo">
             <a class="imagen" href="#">
               <img
@@ -29,11 +26,15 @@
             </a>
           </div>
 
-          <ul id="menu-nav">
+        <input type="checkbox" id="toggle">
+        <label class="open"  for="toggle"><i class="fa-solid fa-bars"></i></label>
 
-            <li>
+        <nav id="nav-title">        
+
+          <ul id="menu-nav">
+            <li class="pop-menu">
               <a class="menu-nav-elem-Explorar" href="#">Explorar</a>
-              <ul class="pop-menu">
+              <ul >
                 <li>Descubrir fotos</li>
                 <li>Búsquedas populares</li>
                 <li>Lo más visitado</li>
@@ -42,7 +43,6 @@
                 <li>Blog de Pixels</li>
               </ul>
             </li>
-
             <li><a class="menu-nav-elem" href="#">Licencia</a></li>
             <li><a class="menu-nav-elem" href="#">Subir</a></li>
             <li>
@@ -58,15 +58,29 @@
                 <li>Preguntas frecuentes</li>
                 <li>Colaboradores</li>
                 <li>Impressum y condiciones</li>
+                <!-- <li  class="social-media"> -->
+                  <!-- <u >
+                    <li><i class="fab fa-facebook-f"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-pinterest-p"></i></li>
+                    <li><i class="fa-brands fa-youtube"></i></li>
+                  </ul> -->
+                  <div class="social-media">
+                    <p><a href="#"><i class="fab fa-facebook-f"></i></a></p>
+                    <p><a href="#"><i class="fa-brands fa-twitter"></i></a></p>
+                    <p><a href="#"><i class="fa-brands fa-instagram"></i></a></i></p>
+                    <p><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></p>
+                    <p><a href="#"><i class="fa-brands fa-youtube"></i></a></p>
+                  </div>
+                <!-- </li> -->
               </ul>
-
             </li>
             <li class="boton-nav">
-              <a class="trans" href="#">Únete</a>
+              <a href="#">Únete</a>
             </li>
           </ul>
-      </nav>
-
+        </nav>
       </div>
       
 
