@@ -13,7 +13,7 @@
   </head>
   <body>
     <header>
-      <div class="menu-desplegar">
+      <div class="menu-desplegar  main-fixed" >
          
           <div class="main-nav-logo">
             <a class="imagen" href="#">
@@ -26,6 +26,19 @@
             </a>
           </div>
 
+          <!-- search bar hide -->
+           <div class="search-hide">
+            <input
+              type="text"
+              id="buscar-hide"
+              name="buscar-hide"
+              placeholder="Buscar fotos y videos gratuitos"
+            />
+            <button class="search-button-hide">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+
         <input type="checkbox" id="toggle">
         <label class="open"  for="toggle"><i class="fa-solid fa-bars"></i></label>
 
@@ -34,7 +47,7 @@
           <ul id="menu-nav">
             <li class="pop-menu">
               <a class="menu-nav-elem-Explorar" href="#">Explorar</a>
-              <ul >
+              <ul class="menu-show-after-checked" >
                 <li>Descubrir fotos</li>
                 <li>Búsquedas populares</li>
                 <li>Lo más visitado</li>

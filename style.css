@@ -16,7 +16,6 @@ header {
 
 .menu-desplegar{
   display: flex;
-
 }
 
 header a {
@@ -77,28 +76,16 @@ header a {
 .menu-nav-elem:hover {
   color: rgb(216, 210, 210);
 }
-/*Transition*/
-/* #menu-nav .boton-nava a{
-  transition: all 300ms ease;
-
-}
-#menu-nav .boton-nav a:hover{
- transform: scale(1.1);
-
-} */
-/*termina transision*/
 
 .boton-nav a {
   background-color: rgba(5, 160, 129, 0.932);
   padding: 8px 22px;
   border-radius: 0.3em;
-  /*transition: width 2s; para transición*/
+  
 }
 /*Me falta  la transicion*/
 .boton-nav a:hover {
   /*es mejopr darle hover al contenedor*/
-  /* background-color: blueviolet;
-  color: red;*/
   /* box-shadow: 0 0 10px 0px rgba(5, 160, 129, 0.5); */
   background-color: rgba(5, 160, 129, 0.5);
 }
@@ -304,7 +291,50 @@ float: left;
   background-color: #232a34;
 }
 
+/*******Sticky nav***********/
 
+.main-fixed{
+  width: 100%;
+  position: -webkit-sticky;
+  background-color:#232a34 ;
+  /* position: fixed; */
+  position: sticky; 
+  z-index: 1000;/*para que se sobreponga*/
+  top: 0; /*Para colocarlo hasta arriba*/
+  /* background-color: #232a34; */
+  /* scroll-behavior: smooth; */
+}
+
+/*Buscador a ocultar*/
+.search-hide{
+  display: flex;
+  width: 100%;
+  /* background-color: #0064f9; */
+  margin:0;
+  padding: 0;
+}
+
+#buscar-hide {
+  width: 100%;
+  height:7vh;
+  margin: 10px  0 10px 10px;
+  padding: 5px;
+  border-radius: 0.5em 0 0 0.5em;
+  background-color: rgba(247, 247, 253, 0.999);
+  border: none;
+}
+#buscar-hide::placeholder {
+  font-size: 1.5em;
+  padding-left: 15px;
+}
+.search-button-hide {
+  border-radius: 0 0.5em 0.5em 0;
+  font-size: x-large;
+  border: none;
+  margin: 10px 10px 10px 0;
+  padding: 0 5px;
+  background-color: rgba(247, 247, 253, 0.999);
+}
 
 /*TABLET*/
 @media screen and (max-width: 900px) {
@@ -312,9 +342,9 @@ float: left;
     flex: 33%;
   }
   .menu-desplegar {
-    display: flex;
-    justify-content: space-between;
-     flex-wrap: wrap; /*Hara que el menu se pase a la siguente linea */
+    /* display: flex; */
+    /* justify-content: space-between; */
+     /* flex-wrap: wrap; Hara que el menu se pase a la siguente linea */
     /* flex-direction: column; */
   }
   #menu-nav{
@@ -330,6 +360,7 @@ float: left;
     background-color: #25233d;
     text-align: center;
   }
+
   #nav-title {
     width: 100%;
     flex-direction: column;
@@ -338,7 +369,10 @@ float: left;
     /*display: none;segunda opición*/
   }
   #toggle:checked ~ #nav-title {
+    /* display: flex; */
+
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
     /* display: none;*/
   }
