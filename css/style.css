@@ -7,7 +7,7 @@
 }
 /*HEADER*/
 header {
-  background: url(images/background.jpg);
+  background: url(../images/background.jpg);
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -295,10 +295,10 @@ float: left;
 
 .main-fixed{
   width: 100%;
-  position: -webkit-sticky;
-  background-color:#232a34 ;
+  /* position: -webkit-sticky; */
+  background-color: transparent ;
   /* position: fixed; */
-  position: sticky; 
+  /* position: sticky;  */
   z-index: 1000;/*para que se sobreponga*/
   top: 0; /*Para colocarlo hasta arriba*/
   /* background-color: #232a34; */
@@ -313,6 +313,13 @@ float: left;
   margin:0;
   padding: 0;
 }
+.search-hide{
+  display: none;
+}
+
+.show-search-hide{
+  display: flex;
+}
 
 #buscar-hide {
   width: 100%;
@@ -322,6 +329,7 @@ float: left;
   border-radius: 0.5em 0 0 0.5em;
   background-color: rgba(247, 247, 253, 0.999);
   border: none;
+  /* display: none; */
 }
 #buscar-hide::placeholder {
   font-size: 1.5em;
@@ -334,7 +342,15 @@ float: left;
   margin: 10px 10px 10px 0;
   padding: 0 5px;
   background-color: rgba(247, 247, 253, 0.999);
+  /* display: none; */
 }
+
+
+.main-scroll{
+  background-color: #232a34;
+  position: fixed;
+}
+
 
 /*TABLET*/
 @media screen and (max-width: 900px) {
