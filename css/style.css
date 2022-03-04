@@ -5,7 +5,7 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-/*HEADER*/
+/***********HEADER***********/
 header {
   background: url(../images/background.jpg);
   display: flex;
@@ -14,7 +14,7 @@ header {
   height: 75vh;
 }
 
-.menu-desplegar{
+.menu-desplegar {
   display: flex;
 }
 
@@ -29,18 +29,16 @@ header a {
   justify-content: right;
   font-size: 13px;
   width: 100%;
-  /*background-color: rgb(46, 46, 87);*/
 }
 
-#menu-nav >  li {
+#menu-nav > li {
   list-style: none;
-  padding: 9px 10px; 
+  padding: 9px 10px;
   font-size: 18px;
   margin: 0 5px; /*este me causa ruido*/
 }
 
 .main-nav-logo {
-  /* margin: 20px;*/
   display: flex;
   padding: 0 10px 0 15px;
   width: 30%;
@@ -69,7 +67,6 @@ header a {
   display: flex;
   padding: 10px;
   width: 70%;
-  /* flex-wrap: nowrap ; */
   justify-content: right;
   margin: 0 20px 0 60px;
 }
@@ -82,7 +79,6 @@ header a {
   background-color: rgba(5, 160, 129, 0.932);
   padding: 8px 22px;
   border-radius: 0.3em;
-  
 }
 /*Me falta  la transicion*/
 .boton-nav a:hover {
@@ -90,6 +86,7 @@ header a {
   /* box-shadow: 0 0 10px 0px rgba(5, 160, 129, 0.5); */
   background-color: rgba(5, 160, 129, 0.5);
 }
+
 .header-main-text {
   color: white;
   display: flex;
@@ -112,7 +109,6 @@ header a {
 .search {
   display: flex;
   width: 50%;
-  /* border-radius: .5em;*/
 }
 #buscar {
   width: 90%;
@@ -141,7 +137,6 @@ header a {
   color: white;
 }
 .main-bar {
-  /*position: relative;*/
   display: flex;
   flex-direction: column;
 }
@@ -159,15 +154,16 @@ header a {
   padding: 10px;
   font-size: 18px;
   font-weight: 500;
-  /*position: relative;*/
 }
 
 #second-menu a:hover {
   color: #0064f9;
 }
+
 #second-menu a:focus {
   border-bottom: 2px solid #0064f9;
 }
+
 .line-after-menu {
   color: rgb(161, 156, 156);
   opacity: 0.2;
@@ -214,156 +210,94 @@ header a {
   display: none;
 }
 
-/*Menu desplegable*/
+/***********Menu desplegable***********/
 
-
-#menu-nav li a:hover{
+#menu-nav li a:hover {
   color: rgb(216, 210, 210);
 }
 
-
-#menu-nav li ul{
-  display:   none;
-
-  /* background-color: rgb(92, 57, 57); */
-  font-weight:500;
+#menu-nav li ul {
+  display: none;
+  font-weight: 500;
   color: rgb(48, 46, 46);
-  font-size:18px;
-  position:absolute;
+  font-size: 18px;
+  position: absolute; /*evita que se deforme el menu principal*/
   /* min-width:300px; */
-   /*evita que se deforme el menu principal*/
-  /* min-width: 100px; */
-  right: 140px;
-  /* left: 100px; */
+  right: 140px; /*esto hace que el submenu no se vaya mucho a la drecha */
   padding: 6px 0;
-  /* float: right; */
   z-index: 1; /*orden de las capas*/
 }
 
-#menu-nav li ul li{
+#menu-nav li ul li {
   position: relative;
   background-color: white;
-  /* left: -150px;  */
-  /* right: 0; */
   top: 0;
-}
-
-
-#menu-nav li ul li {
-text-decoration: none;
-list-style: none;
-}
-
-.menu-show-after-checked{ /*eel primer pop-menu*/
-  position: absolute;
-  /* background-color: #0064f9; */
-  width:200px;
-  right: 0;
-  left: 39em;
-  /* right: -100px; */
-  /* right:-150px; */
-}
-
-/*esto hace que no se deforme la pagina mas a la derecha*/
-/* #menu-nav li ul{   
-  right: 140px;
-} */
-
-
-/* #menu-nav li ul:last-child {
- right: 140px;
-  } */
-
-
-/* .dot-section ul li{
-  
-  left: -200px;
-} */
-
-
-/* #menu-nav li ul li{
- 
-  left: 100px;
-  top:10px;
-} */
-
-/* #menu-nav  li ul li ul {
-  right: -140px;
-  top:10px;
-} */
-#menu-nav li ul li{
-  /* position:relative;para agregar submenus */
-}
-
-
-/* #menu-nav li ul:hover{
-float: left;
-} */
-
-#menu-nav li ul li{
+  text-decoration: none;
+  list-style: none;
   padding: 10px 20px 10px 15px;
 }
 
-#menu-nav li:hover > ul{
+.menu-show-after-checked { /*eel primer pop-menu*/
+  position: absolute;
+  width: 200px;
+  right: 0;
+  left: 39em;
+}
+
+#menu-nav li:hover > ul {
   display: block;
 }
 
-#menu-nav li:hover > ul li:hover{
+#menu-nav li:hover > ul li:hover {
   background-color: rgb(221, 218, 218);
 }
 
-/*Social Media Icons*/
-.social-media{
+/***********Social Media Icons***********/
+.social-media {
   display: flex;
-  /* min-width: 100px; */
-  /* padding: 2px;
-  margin: 10px; */
 }
 
-.social-media i{
+.social-media i {
   padding: 12px 20px;
   /* margin: 10px; */
   color: #232a34;
 }
-.social-media i:hover{
+.social-media i:hover {
   color: white;
   background-color: #232a34;
 }
 
-/*******Sticky nav***********/
+/***********Sticky nav***********/
 
-.main-fixed{
+.main-fixed {
   width: 100%;
   /* position: -webkit-sticky; */
-  background-color: transparent ;
+  background-color: transparent;
   /* position: fixed; */
   /* position: sticky;  */
-  z-index: 1000;/*para que se sobreponga*/
+  z-index: 1000; /*para que se sobreponga*/
   top: 0; /*Para colocarlo hasta arriba*/
-  /* background-color: #232a34; */
-  /* scroll-behavior: smooth; */
 }
 
-/*Buscador a ocultar*/
-.search-hide{
+/***********Buscador a ocultar***********/
+.search-hide {
   display: flex;
   width: 100%;
-  /* background-color: #0064f9; */
-  margin:0;
+  margin: 0;
   padding: 0;
 }
-.search-hide{
+.search-hide {
   display: none;
 }
 
-.show-search-hide{
+.show-search-hide {
   display: flex;
 }
 
 #buscar-hide {
   width: 100%;
-  height:7vh;
-  margin: 10px  0 10px 10px;
+  height: 7vh;
+  margin: 10px 0 10px 10px;
   padding: 5px;
   border-radius: 0.5em 0 0 0.5em;
   background-color: rgba(247, 247, 253, 0.999);
@@ -384,14 +318,12 @@ float: left;
   /* display: none; */
 }
 
-
-.main-scroll{
+.main-scroll {
   background-color: #232a34;
-  position: fixed;
+  position: fixed; /*se vuelve fijo al bajar el scroll*/
 }
 
-
-/*TABLET*/
+/***********TABLET***********/
 @media screen and (max-width: 900px) {
   .column {
     flex: 33%;
@@ -399,10 +331,10 @@ float: left;
   .menu-desplegar {
     /* display: flex; */
     /* justify-content: space-between; */
-     /* flex-wrap: wrap; Hara que el menu se pase a la siguente linea */
+    /* flex-wrap: wrap; Hara que el menu se pase a la siguente linea */
     /* flex-direction: column; */
   }
-  #menu-nav{
+  #menu-nav {
     flex-direction: column;
     /* width: 50%; */
   }
@@ -437,7 +369,7 @@ float: left;
   }
 }
 
-/*MOBILE*/
+/***********MOBILE***********/
 @media screen and (max-width: 499px) {
   .column {
     flex: 50%;
