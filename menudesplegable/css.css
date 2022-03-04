@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#header{
+    /* margin: auto; */
+    
+    /*para que es esto*/
+    /* width: 500px; */
+    float: right;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ul{
+   
+    list-style: none;
+}
+
+.nav li a{
+    background-color: black;
+    color:white;
+     text-decoration: none;
+    padding: 10px 15px;
+    display: block; /*antes estaba en inline*/
+
+}
+.nav li a:hover{
+    background-color: grey;
+
+}
+
+.nav > li{
+    float: left; /*Hizo que se movieran a la izquierda */
+}
+.nav li ul{
+    display: none;
+     position: absolute; /* esta conforme al menu, para que no se deforme este */
+    min-width: 140px;
+}
+
+.nav li:hover > ul  { /*aplicando hover sobre le papa, para que se desplieguen los hijos*/
+    display: block;
+
+}
+
+/**esto me podria swrvir para mover mi submenu */
+
+.nav li ul li{ /*para los menus*/
+position: relative; /*para poner los submenus a lado y se modifica con las propiedades anteriores*/
+/* left: -140px; */
+}
+
+.nav li ul li ul {
+    right: -140px;
+    top:10px;
+}
+
+.nav li ul li ul:last-child {
+    right: 140px;
+    top:10px;
+}
+
+
+
+
+
+
+
+
+
+

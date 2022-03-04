@@ -31,6 +31,7 @@ header a {
   width: 100%;
   /*background-color: rgb(46, 46, 87);*/
 }
+
 #menu-nav >  li {
   list-style: none;
   padding: 9px 10px; 
@@ -215,26 +216,83 @@ header a {
 
 /*Menu desplegable*/
 
+
 #menu-nav li a:hover{
   color: rgb(216, 210, 210);
 }
 
 
 #menu-nav li ul{
-  display: none;
-  background-color: rgb(255, 255, 255);
+  display:   none;
+
+  /* background-color: rgb(92, 57, 57); */
   font-weight:500;
   color: rgb(48, 46, 46);
   font-size:18px;
-  position:absolute; /*evita que se deforme el menu principal*/
-  min-width: 200px;
+  position:absolute;
+  /* min-width:300px; */
+   /*evita que se deforme el menu principal*/
+  /* min-width: 100px; */
+  right: 140px;
+  /* left: 100px; */
   padding: 6px 0;
   /* float: right; */
   z-index: 1; /*orden de las capas*/
 }
 
 #menu-nav li ul li{
-  position:relative;/*para agregar submenus*/
+  position: relative;
+  background-color: white;
+  /* left: -150px;  */
+  /* right: 0; */
+  top: 0;
+}
+
+
+#menu-nav li ul li {
+text-decoration: none;
+list-style: none;
+}
+
+.menu-show-after-checked{ /*eel primer pop-menu*/
+  position: absolute;
+  /* background-color: #0064f9; */
+  width:200px;
+  right: 0;
+  left: 39em;
+  /* right: -100px; */
+  /* right:-150px; */
+}
+
+/*esto hace que no se deforme la pagina mas a la derecha*/
+/* #menu-nav li ul{   
+  right: 140px;
+} */
+
+
+/* #menu-nav li ul:last-child {
+ right: 140px;
+  } */
+
+
+/* .dot-section ul li{
+  
+  left: -200px;
+} */
+
+
+/* #menu-nav li ul li{
+ 
+  left: 100px;
+  top:10px;
+} */
+
+/* #menu-nav  li ul li ul {
+  right: -140px;
+  top:10px;
+} */
+#menu-nav li ul li{
+  /* position:relative;para agregar submenus */
 }
 
 
@@ -242,15 +300,6 @@ header a {
 float: left;
 } */
 
-/* .pop-menu{
-  background-color: rgb(255, 255, 255);
-  font-weight:500;
-  color: rgb(48, 46, 46);
-  font-size:18px;
-  position:absolute; 
-  max-width: 150px;
-  padding: 6px 0;
- } */
 #menu-nav li ul li{
   padding: 10px 20px 10px 15px;
 }
@@ -258,18 +307,7 @@ float: left;
 #menu-nav li:hover > ul{
   display: block;
 }
-/* #menu-nav li ul:before{
-  content: '';
-  width: 0;
-  height: 0;
-  border-left: 12 solid transparent;
-  border-right: 12px solid transparent;
-  border-bottom: 12pc solid transparent;
-  position: absolute;
-  top: -12px;
-  left: 20px;
 
-} */
 #menu-nav li:hover > ul li:hover{
   background-color: rgb(221, 218, 218);
 }
@@ -277,6 +315,7 @@ float: left;
 /*Social Media Icons*/
 .social-media{
   display: flex;
+  /* min-width: 100px; */
   /* padding: 2px;
   margin: 10px; */
 }
