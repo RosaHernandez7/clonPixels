@@ -80,11 +80,13 @@ header a {
   padding: 8px 22px;
   border-radius: 0.3em;
 }
-/*Me falta  la transicion*/
+
 .boton-nav a:hover {
+  position: relative; /*conesto puedo hace rla transicon*/
   /*es mejopr darle hover al contenedor*/
-  /* box-shadow: 0 0 10px 0px rgba(5, 160, 129, 0.5); */
+  /* esto puede servir para google box-shadow: 0 0 10px 0px rgba(5, 160, 129, 0.5); */
   background-color: rgba(5, 160, 129, 0.5);
+  top: -2px;
 }
 
 .header-main-text {
