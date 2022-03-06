@@ -325,6 +325,15 @@ header a {
   position: fixed; /*se vuelve fijo al bajar el scroll*/
 }
 
+
+/*Division de contenido*/
+
+select::after{
+padding: 20px;
+width:30px;
+}
+
+
 /***********TABLET***********/
 @media screen and (max-width: 900px) {
   .column {
